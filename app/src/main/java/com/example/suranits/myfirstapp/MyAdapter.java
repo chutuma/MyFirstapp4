@@ -17,12 +17,12 @@ public class MyAdapter extends BaseAdapter {
 
     private Context context;
     private int[] ints;
-    private String[] titlestring,detailStrings;
+    private String[] titleStrings,detailStrings;
 //กดalt+insetr กดเลือกconstanterทั้ง4อัน
-    public MyAdapter(Context context, int[] ints, String[] titlestring, String[] detailStrings) {
+    public MyAdapter(Context context, int[] ints, String[] titleStrings, String[] detailStrings) {
         this.context = context;
         this.ints = ints;
-        this.titlestring = titlestring;
+        this.titleStrings = titleStrings;
         this.detailStrings = detailStrings;
     }
 
@@ -50,12 +50,13 @@ public class MyAdapter extends BaseAdapter {
         //intial view ผูกชื่อของไอดีของview กับตัวแปล
         ImageView imageView = (ImageView) view.findViewById(R.id.imvicon);
         TextView titletextView = (TextView) view.findViewById(R.id.txtTitleLiv);
-        TextView deteltextView = (TextView) view.findViewById(R.id.txtDetelLiv);
+        TextView deteltextView = (TextView) view.findViewById(R.id.txtDetailLiv);
 
         //show view เอาข้อมูลไปแสดงบนหน้า app
         imageView.setImageResource(ints[position]);
-        titletextView.setText(titlestring[position]);
+        titletextView.setText(titleStrings[position]);
         deteltextView.setText(detailStrings[position]);
+
 
         return view; //ทำหน้าที่รับจำนวนข้อมูลแล้วแสดงผลบนหน้าapp
     }

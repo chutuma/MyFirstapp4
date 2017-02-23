@@ -30,7 +30,7 @@
             android:text="TextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/txtDetelLiv"
+            android:id="@+id/txtDetailLiv"
             android:textSize="@dimen/h3"
             android:textColor="@android:color/holo_blue_bright" />
     </LinearLayout>
