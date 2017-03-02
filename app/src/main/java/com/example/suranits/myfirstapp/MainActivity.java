@@ -9,7 +9,7 @@ import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
 
-    //ประการตัวแปร
+
     ListView listView;
     private int[] ints = new int[]{R.drawable.traffic_01,
             R.drawable.traffic_02,
@@ -31,7 +31,8 @@ public class MainActivity extends AppCompatActivity {
             R.drawable.traffic_18,
             R.drawable.traffic_19,
             R.drawable.traffic_20};
-    private String [] titleStrings,detailStrings;
+    //ประการตัวแปร
+    private String [] titleStrings,detailStrings,shortStrings;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,9 +44,18 @@ public class MainActivity extends AppCompatActivity {
         titleStrings = getResources().getStringArray(R.array.title);
         detailStrings = getResources().getStringArray(R.array.detail);
 
-        //create Listview
+        //ซับสติงดีเทลสติงเพื่อให้มีข้อความไม่เกิน 30 ชาเลกเตอร์
+        shortStrings = new String[detailStrings.length]; //จองเพิ่มที่ในหน่วยความจำในshortStringa
+        for(int i=0; i < detailStrings.length;i++)
+        {
+            shortStrings[i] = detailStrings[i].substring(0, 29)+"...";
 
-        MyAdapter myAdapter = new MyAdapter(MainActivity.this,ints,titleStrings,detailStrings);
+        }//end for
+
+
+            //create Listview
+
+            MyAdapter myAdapter = new MyAdapter(MainActivity.this, ints, titleStrings, shortStrings);
         listView.setAdapter(myAdapter);
 
 
