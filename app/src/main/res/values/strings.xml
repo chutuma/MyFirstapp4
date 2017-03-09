@@ -4,4 +4,12 @@
     <string name="txttitle">ป้ายจราจร</string>
     <string name="moreInfo">More Info</string>
     <string name="aboutme">About Me</string>
+    <string name="txtname">นางสาว ชุติมา แสนบุดดา</string>
+    <string name="txtpass">5711020660023</string>
+    <string name="txtmajor">หลักสูตรวิทยาการคอมพิวเตอร์</string>
+    <string name="txtface">Apro Geramia</string>
+    <string name="backk">Back</string>
+
 </resources>
+
+
