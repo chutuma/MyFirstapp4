@@ -17,21 +17,37 @@
         android:textAlignment="center"
         android:textColor="@android:color/background_light" />
 
-    <Button
-        android:text="@string/moreInfo"
-        android:layout_width="match_parent"
-        android:onClick="onClikmoreinfo"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnmoreinfo"
-        android:layout_alignParentBottom="true" />
-
     <ListView
+        android:id="@+id/livtarffic"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/btnmoreinfo"
+        android:layout_above="@+id/Laybotton"
         android:layout_below="@+id/textView2"
         android:layout_margin="@dimen/my_margin"
-        android:id="@+id/livtarffic"
         android:background="#c8ffffff" />
+
+    <LinearLayout
+        android:id="@+id/Laybotton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnmoreinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClikmoreinfo"
+            android:text="@string/moreInfo" />
+
+        <Button
+            android:id="@+id/BtnAboutMe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/aboutme" />
+
+    </LinearLayout>
 
 </RelativeLayout>
